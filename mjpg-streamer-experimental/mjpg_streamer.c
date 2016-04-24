@@ -352,6 +352,7 @@ int main(int argc, char *argv[])
             closelog();
             exit(0);
         }
+        LOG("\n");
     }
 
     /* open output plugin */
@@ -403,7 +404,9 @@ int main(int argc, char *argv[])
             closelog();
             exit(EXIT_FAILURE);
         }
+        LOG("\n");
     }
+    LOG("\n");
 
     /* start to read the input, push pictures into global buffer */
     DBG("starting %d input plugin\n", global.incnt);
