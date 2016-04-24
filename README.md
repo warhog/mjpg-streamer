@@ -1,7 +1,8 @@
 mjpg-streamer
 =============
 
-This is a fork of http://sourceforge.net/projects/mjpg-streamer/ with added support for the Raspberry Pi camera via the input_raspicam plugin.
+This is a fork of https://github.com/jacksonliam/mjpg-streamer with input_mjpg
+and output_simplehttp plugins.
 
 mjpg-streamer is a command line application that copies JPEG frames from one
 or more input plugins to multiple output plugins. It can be used to stream
@@ -34,11 +35,13 @@ Input plugins:
 * input_ptp2
 * input_raspicam ([documentation](mjpg-streamer-experimental/plugins/input_raspicam/README.md))
 * input_uvc ([documentation](mjpg-streamer-experimental/plugins/input_uvc/README.md))
+* input_mjpg (reads foreign mjpg streams)
 
 Output plugins:
 
 * output_file
 * output_http ([documentation](mjpg-streamer-experimental/plugins/output_http/README.md))
+* output_simplehttp ([documentation](mjpg-streamer-experimental/plugins/output_simplehttp/README.md))
 * output_rtsp
 * output_udp
 * output_viewer ([documentation](mjpg-streamer-experimental/plugins/output_viewer/README.md))
@@ -47,7 +50,7 @@ Building & Installation
 =======================
 
 You must have cmake installed. You will also probably want to have a development
-version of libjpeg installed. I used libjpeg62-dev.
+version of libjpeg installed. I used libjpeg9-dev.
 
 Simple compilation
 ------------------
