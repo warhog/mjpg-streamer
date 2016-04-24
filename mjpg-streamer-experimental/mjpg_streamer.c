@@ -307,6 +307,9 @@ int main(int argc, char *argv[])
         global.in[i].buf       = NULL;
         global.in[i].size      = 0;
         global.in[i].plugin = (tmp > 0) ? strndup(input[i], tmp) : strdup(input[i]);
+        LOG("loading input plugin ");
+        LOG(global.in[i].plugin);
+        LOG(" with configuration:\n");
         global.in[i].handle = dlopen(global.in[i].plugin, RTLD_LAZY);
         if(!global.in[i].handle) {
             LOG("ERROR: could not find input plugin\n");
@@ -355,6 +358,9 @@ int main(int argc, char *argv[])
     for(i = 0; i < global.outcnt; i++) {
         tmp = (size_t)(strchr(output[i], ' ') - output[i]);
         global.out[i].plugin = (tmp > 0) ? strndup(output[i], tmp) : strdup(output[i]);
+        LOG("loading output plugin ");
+        LOG(global.out[i].plugin);
+        LOG(" with configuration:\n");
         global.out[i].handle = dlopen(global.out[i].plugin, RTLD_LAZY);
         if(!global.out[i].handle) {
             LOG("ERROR: could not find output plugin %s\n", global.out[i].plugin);
