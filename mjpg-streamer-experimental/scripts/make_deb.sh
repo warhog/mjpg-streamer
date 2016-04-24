@@ -15,6 +15,6 @@ sudo checkinstall -D \
                   --pkgversion "$GITVERSION" \
                   --pkgrelease "1" \
                   --maintainer "tom_stoeveken@users.sourceforge.net" \
-                  --requires "libjpeg62" \
+                  --requires "libjpeg9" \
                   --nodoc \
                     make DESTDIR=/usr install
