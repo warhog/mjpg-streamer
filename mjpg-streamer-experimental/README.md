@@ -30,11 +30,13 @@ Input plugins:
 * input_ptp2
 * input_raspicam ([documentation](plugins/input_raspicam/README.md))
 * input_uvc ([documentation](plugins/input_uvc/README.md))
+* input_mjpg (reads foreign mjpg streams)
 
 Output plugins:
 
 * output_file
 * output_http ([documentation](plugins/output_http/README.md))
+* output_simplehttp ([documentation](plugins/output_simplehttp/README.md))
 * output_rtsp
 * output_udp
 * output_viewer ([documentation](plugins/output_viewer/README.md))
