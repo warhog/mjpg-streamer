@@ -28,8 +28,8 @@ To view the stream use VLC or Firefox/Chrome and open the URL:
 
 If there are multiple input plugins, you can access each stream individually:
 
-    http://127.0.0.1:8080/stream0
-    http://127.0.0.1:8080/stream1
+    http://127.0.0.1:8080/stream_0
+    http://127.0.0.1:8080/stream_1
 
 To view a single JPEG just open this URL:
 
